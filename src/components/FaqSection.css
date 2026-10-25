@@ -1,0 +1,89 @@
+/* ========================================
+   TRIMI FAQ ACCORDION
+======================================== */
+
+.trimi-faq-section {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 85px 7% 95px;
+  border-top: 1px solid var(--trimi-line);
+  box-sizing: border-box;
+}
+
+.faq-accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 45px;
+}
+
+.faq-accordion-item {
+  border: 1px solid var(--trimi-line);
+  border-radius: 12px;
+  background: white;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faq-accordion-item:hover {
+  border-color: #a8b89c;
+}
+
+.faq-accordion-item.open {
+  border-color: var(--trimi-green);
+  box-shadow: 0 8px 24px rgba(23, 37, 31, 0.05);
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--trimi-ink);
+}
+
+.faq-chevron {
+  color: var(--trimi-green);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.faq-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer-wrapper {
+  overflow: hidden;
+}
+
+.faq-answer-text {
+  padding: 0 24px 22px;
+  border-top: 1px dashed #eff3eb;
+  padding-top: 16px;
+}
+
+.faq-answer-text p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--trimi-muted);
+  line-height: 1.75;
+}
+
+@media (max-width: 760px) {
+  .faq-question-btn {
+    padding: 18px 18px;
+    font-size: 14px;
+  }
+  .faq-answer-text {
+    padding: 0 18px 18px;
+  }
+}

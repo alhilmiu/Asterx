@@ -1,0 +1,178 @@
+/* ========================================
+   HOME PAGE ENHANCEMENT STYLES
+======================================== */
+
+.trimi-availability-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #edf6eb;
+  border: 1px solid #d4e7cf;
+  color: var(--trimi-green);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.pulse-dot-green {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #27c93f;
+  box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.7);
+  animation: pulse-ring-green 1.8s infinite;
+}
+
+@keyframes pulse-ring-green {
+  0% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.7); }
+  70% { box-shadow: 0 0 0 7px rgba(39, 201, 63, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0); }
+}
+
+/* Portfolio Filters */
+.portfolio-category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.portfolio-cat-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--trimi-line);
+  background: white;
+  color: var(--trimi-muted);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.portfolio-cat-btn:hover {
+  border-color: #a8b89c;
+  color: var(--trimi-ink);
+}
+
+.portfolio-cat-btn.active {
+  background: var(--trimi-green);
+  color: white;
+  border-color: var(--trimi-green);
+}
+
+/* WhatsApp Floating Badge or Quick Contact in Contact Section */
+.trimi-contact-section {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 80px 7% 95px;
+  border-top: 1px solid var(--trimi-line);
+  box-sizing: border-box;
+}
+
+.trimi-contact-card {
+  width: 100%;
+  padding: 56px 36px 48px;
+  border-radius: 16px;
+  background: radial-gradient(circle at 50% 0%, #f4f8f0 0%, #ffffff 80%);
+  border: 1px solid var(--trimi-line);
+  color: var(--trimi-ink);
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(23, 37, 31, 0.04);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.trimi-contact-card .trimi-eyebrow {
+  color: var(--trimi-green);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #edf5eb;
+}
+
+.trimi-contact-card h2 {
+  color: var(--trimi-ink);
+  margin: 20px 0 14px;
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -1.2px;
+}
+
+.trimi-contact-card h2 span {
+  color: var(--trimi-green);
+  font-style: italic;
+}
+
+.trimi-contact-card p {
+  max-width: 520px;
+  margin: 0 auto 28px;
+  color: var(--trimi-muted);
+  font-size: 14.5px;
+  line-height: 1.8;
+}
+
+.contact-cta-btn {
+  background: var(--trimi-green) !important;
+  color: #ffffff !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  padding: 15px 30px !important;
+  border: none !important;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(36, 77, 60, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.contact-cta-btn:hover {
+  background: #183b2d !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(36, 77, 60, 0.22);
+}
+
+.trimi-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.trimi-contact-card .trimi-contact-info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--trimi-line);
+  font-size: 12px;
+  color: var(--trimi-muted);
+}
+
+.trimi-contact-card .trimi-contact-info-strip div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+@media (max-width: 900px) {
+  .trimi-availability-pill {
+    display: none;
+  }
+  .trimi-contact-card {
+    padding: 42px 20px 36px;
+  }
+}

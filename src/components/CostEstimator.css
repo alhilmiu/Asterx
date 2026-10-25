@@ -1,0 +1,358 @@
+/* ========================================
+   TRIMI INTERACTIVE COST ESTIMATOR
+======================================== */
+
+.cost-estimator-section {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 85px 7% 95px;
+  border-top: 1px solid var(--trimi-line);
+}
+
+.estimator-layout {
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  gap: 40px;
+  align-items: start;
+  margin-top: 45px;
+}
+
+.estimator-group {
+  margin-bottom: 38px;
+}
+
+.group-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.step-badge {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: var(--trimi-green);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.group-title h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--trimi-ink);
+}
+
+.group-title p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--trimi-muted);
+}
+
+/* Tipe Proyek Grid */
+.project-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.type-card {
+  padding: 20px;
+  border: 1.5px solid var(--trimi-line);
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.type-card:hover {
+  border-color: #a8b89c;
+  box-shadow: 0 10px 25px rgba(36, 77, 60, 0.06);
+}
+
+.type-card.selected {
+  border-color: var(--trimi-green);
+  background: #fbfdf9;
+  box-shadow: 0 12px 30px rgba(36, 77, 60, 0.1);
+}
+
+.type-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #edf5eb;
+  color: var(--trimi-green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.type-price {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--trimi-muted);
+}
+
+.type-card h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: var(--trimi-ink);
+}
+
+.type-card p {
+  margin: 0 0 14px;
+  font-size: 12px;
+  color: var(--trimi-muted);
+  line-height: 1.6;
+}
+
+.type-days {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--trimi-green);
+  font-weight: 600;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--trimi-line);
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feature-item:hover {
+  border-color: #b0c2a5;
+  background: #fafcf8;
+}
+
+.feature-item.active {
+  border-color: var(--trimi-green);
+  background: #f6f9f3;
+}
+
+.feature-item input[type="checkbox"] {
+  display: none;
+}
+
+.feature-custom-checkbox {
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid #c2c9bd;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--trimi-green);
+  background: white;
+}
+
+.feature-item.active .feature-custom-checkbox {
+  border-color: var(--trimi-green);
+  background: #eef5e9;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.feature-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--trimi-ink);
+}
+
+.feature-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--trimi-green);
+}
+
+.feature-desc {
+  margin: 0;
+  font-size: 12px;
+  color: var(--trimi-muted);
+  line-height: 1.5;
+}
+
+/* Summary Panel */
+.estimator-summary-panel {
+  position: sticky;
+  top: 30px;
+}
+
+.summary-card {
+  padding: 30px 26px;
+  border: 1px solid var(--trimi-line);
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 20px 45px rgba(23, 37, 31, 0.08);
+}
+
+.summary-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #f1f7ec;
+  color: var(--trimi-green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.summary-price-box {
+  margin: 22px 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--trimi-line);
+}
+
+.summary-price-box .label {
+  font-size: 12px;
+  color: var(--trimi-muted);
+}
+
+.price-value {
+  margin: 6px 0 4px;
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--trimi-green);
+  letter-spacing: -0.5px;
+}
+
+.vat-note {
+  font-size: 10px;
+  color: #92998f;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 24px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.detail-row span {
+  color: var(--trimi-muted);
+}
+
+.detail-row strong {
+  color: var(--trimi-ink);
+  font-weight: 600;
+}
+
+.included-perks {
+  margin-bottom: 26px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #fbfcf9;
+  border: 1px solid #edf0ea;
+}
+
+.perks-title {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--trimi-ink);
+  margin-bottom: 12px;
+}
+
+.included-perks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.included-perks li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  color: #4f584e;
+  line-height: 1.4;
+}
+
+.perk-icon {
+  color: #4b886c;
+  flex-shrink: 0;
+}
+
+.estimator-submit-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.summary-guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 16px 0 0;
+  font-size: 11px;
+  color: var(--trimi-muted);
+}
+
+@media (max-width: 960px) {
+  .estimator-layout {
+    grid-template-columns: 1fr;
+  }
+  .estimator-summary-panel {
+    position: static;
+  }
+  .project-type-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,395 @@
+
+/* ========================================
+   TRIMI — ROBOT HERO
+   Theme: Navy, Silver, Electric Blue
+======================================== */
+
+.robot-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  min-height: 620px;
+  padding: 64px clamp(24px, 7vw, 110px) 76px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background:
+    radial-gradient(
+      ellipse at 76% 43%,
+      rgba(53, 99, 233, 0.12),
+      transparent 43%
+    ),
+    linear-gradient(
+      135deg,
+      #f4f7fb 0%,
+      #e9eef7 55%,
+      #f4f7fb 100%
+    );
+  color: #101c36;
+}
+
+.robot-hero *,
+.robot-hero *::before,
+.robot-hero *::after {
+  box-sizing: border-box;
+}
+
+/* Background typography */
+
+.robot-hero-bg-text {
+  position: absolute;
+  z-index: -1;
+  top: 43%;
+  left: 54%;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+  color: rgba(16, 28, 54, 0.045);
+  font-size: clamp(70px, 13vw, 200px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.09em;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Hero copy */
+
+.robot-hero-copy {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 570px;
+  min-width: 0;
+}
+
+.robot-hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #526078;
+  font-size: 10px;
+  font-weight: 750;
+  line-height: 1.7;
+  letter-spacing: 0.13em;
+}
+
+.robot-hero-dot {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3563e9;
+  box-shadow: 0 0 12px rgba(53, 99, 233, 0.35);
+}
+
+.robot-hero-copy h1 {
+  margin: 25px 0 20px;
+  color: #101c36;
+  font-size: clamp(44px, 5.4vw, 78px);
+  font-weight: 750;
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+  overflow-wrap: break-word;
+}
+
+.robot-hero-copy h1 span {
+  color: #3563e9;
+}
+
+.robot-hero-copy > p {
+  max-width: 430px;
+  margin: 0;
+  color: #526078;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* Buttons */
+
+.robot-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.robot-hero-primary,
+.robot-hero-secondary {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 21px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.robot-hero-primary {
+  background-color: #101c36;
+  color: #ffffff;
+}
+
+.robot-hero-primary:hover {
+  background-color: #1d3557;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.robot-hero-secondary {
+  border-color: rgba(16, 28, 54, 0.2);
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #101c36;
+}
+
+.robot-hero-secondary:hover {
+  border-color: rgba(53, 99, 233, 0.35);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #101c36;
+  transform: translateY(-2px);
+}
+
+.robot-hero-primary:focus-visible,
+.robot-hero-secondary:focus-visible {
+  outline: 3px solid rgba(53, 99, 233, 0.45);
+  outline-offset: 4px;
+}
+
+/* Robot scene */
+
+.robot-hero-scene {
+  position: relative;
+  width: 100%;
+  height: 490px;
+  min-width: 0;
+  overflow: visible;
+}
+
+.robot-hero-scene canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Floating labels */
+
+.robot-hero-chip {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: calc(100% - 12px);
+  padding: 11px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  background: rgba(250, 251, 255, 0.88);
+  box-shadow: 0 10px 35px rgba(16, 28, 54, 0.08);
+  color: #526078;
+  font-size: 9px;
+  font-weight: 750;
+  line-height: 1.5;
+  letter-spacing: 0.07em;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.robot-hero-chip-top {
+  top: 12%;
+  right: 0;
+}
+
+.robot-hero-chip-top > span {
+  color: #3563e9;
+  font-size: 16px;
+}
+
+.robot-hero-chip-bottom {
+  bottom: 12%;
+  left: 0;
+}
+
+/* Hero bottom caption */
+
+.robot-hero-index {
+  position: absolute;
+  bottom: 24px;
+  left: clamp(24px, 7vw, 110px);
+  color: #7b879b;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.14em;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .robot-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    gap: 12px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .robot-hero-copy h1 {
+    font-size: clamp(42px, 5.5vw, 60px);
+  }
+
+  .robot-hero-scene {
+    height: 420px;
+  }
+
+  .robot-hero-chip {
+    padding: 9px 11px;
+    font-size: 8px;
+  }
+
+  .robot-hero-index {
+    left: 32px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .robot-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    min-height: auto;
+    padding: 54px 24px 68px;
+  }
+
+  .robot-hero-copy {
+    max-width: 580px;
+  }
+
+  .robot-hero-label {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .robot-hero-copy h1 {
+    margin-top: 22px;
+    margin-bottom: 17px;
+    font-size: clamp(43px, 9vw, 66px);
+    line-height: 1.03;
+  }
+
+  .robot-hero-copy > p {
+    max-width: 480px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .robot-hero-actions {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .robot-hero-scene {
+    width: 100%;
+    height: 390px;
+    margin-top: 12px;
+  }
+
+  .robot-hero-bg-text {
+    top: 57%;
+    left: 50%;
+    font-size: clamp(64px, 14vw, 110px);
+  }
+
+  .robot-hero-chip-top {
+    top: 7%;
+    right: 0;
+  }
+
+  .robot-hero-chip-bottom {
+    bottom: 7%;
+    left: 0;
+  }
+
+  .robot-hero-index {
+    bottom: 20px;
+    left: 24px;
+    font-size: 8px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+  .robot-hero {
+    padding: 42px 20px 64px;
+  }
+
+  .robot-hero-copy h1 {
+    font-size: clamp(39px, 10vw, 48px);
+  }
+
+  .robot-hero-label {
+    align-items: flex-start;
+    font-size: 8px;
+  }
+
+  .robot-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .robot-hero-primary,
+  .robot-hero-secondary {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .robot-hero-scene {
+    height: 330px;
+    margin-top: 8px;
+  }
+
+  .robot-hero-chip {
+    gap: 6px;
+    padding: 8px 9px;
+    font-size: 7px;
+  }
+
+  .robot-hero-index {
+    left: 20px;
+    max-width: calc(100% - 40px);
+    letter-spacing: 0.1em;
+  }
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .robot-hero-primary,
+  .robot-hero-secondary {
+    transition: none;
+  }
+}

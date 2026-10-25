@@ -1,0 +1,150 @@
+/* ========================================
+   TRIMI ADMIN DASHBOARD STYLES
+======================================== */
+
+.dashboard-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  padding: 22px 24px;
+  background: white;
+  border: 1px solid var(--line, #eee6e3);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  border-color: #c9d5c4;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+.stat-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted, #8c8180);
+}
+
+.stat-icon-wrapper {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #f2f6ee;
+  color: #244d3c;
+}
+
+.stat-number {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #17251f;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.stat-footer-note {
+  font-size: 11px;
+  color: #798375;
+}
+
+/* Quick Actions Section */
+.dashboard-actions-section {
+  margin-top: 36px;
+}
+
+.dashboard-actions-section h2 {
+  font-size: 18px;
+  margin: 0 0 16px;
+  color: #17251f;
+}
+
+.actions-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.action-quick-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: white;
+  border: 1px solid var(--line, #eee6e3);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.action-quick-card:hover {
+  border-color: #244d3c;
+  box-shadow: 0 12px 30px rgba(36, 77, 60, 0.08);
+  transform: translateY(-3px);
+}
+
+.action-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.action-icon-pill {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #edf5eb;
+  color: #244d3c;
+}
+
+.action-arrow {
+  color: #8c8180;
+  transition: transform 0.2s ease;
+}
+
+.action-quick-card:hover .action-arrow {
+  transform: translate(3px, -3px);
+  color: #244d3c;
+}
+
+.action-quick-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #17251f;
+}
+
+.action-quick-card p {
+  margin: 0;
+  font-size: 12.5px;
+  color: #746968;
+  line-height: 1.6;
+}
+
+@media (max-width: 1050px) {
+  .dashboard-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .actions-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

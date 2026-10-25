@@ -1,0 +1,264 @@
+/* Public Invitation Page Layout & Cover Reveal Styles */
+.public-invitation-viewport {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Staff Preview Banner */
+.staff-preview-banner {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #f59e0b;
+  color: #78350f;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 10000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading Screen */
+.public-inv-loading-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0f1016;
+  color: #f3f4f6;
+  text-align: center;
+  padding: 20px;
+}
+
+.loading-heart-pulse {
+  color: #ec4899;
+  animation: heartPulse 1.2s infinite ease-in-out;
+  margin-bottom: 20px;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+.public-inv-loading-screen h2 {
+  font-size: 1.4rem;
+  margin: 0 0 8px;
+}
+
+.public-inv-loading-screen p {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Error 404 Screen */
+.public-inv-error-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0c0d12;
+  padding: 24px;
+}
+
+.error-card {
+  max-width: 500px;
+  background: #14151c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 28px;
+  text-align: center;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+.error-icon {
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.error-card h1 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.error-card p {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.error-help-box {
+  background: #1a1c26;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 24px;
+  border-left: 3px solid #6366f1;
+  text-align: left;
+}
+
+.error-help-box small {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  display: block;
+}
+
+.back-to-home-link {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 10px;
+  background: #6366f1;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.back-to-home-link:hover {
+  background: #4f46e5;
+}
+
+/* ==========================================================
+   COVER REVEAL / BUKA UNDANGAN OVERLAY
+   ========================================================== */
+.invitation-cover-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: opacity 0.6s ease;
+}
+
+.invitation-cover-overlay.cover-modern-minimalist {
+  background: radial-gradient(circle at center, #27272a 0%, #09090b 100%);
+  color: #fafaf9;
+}
+
+.invitation-cover-overlay.cover-rustic-floral {
+  background: radial-gradient(circle at center, #452b1e 0%, #22140d 100%);
+  color: #fdfaf7;
+}
+
+.invitation-cover-overlay.cover-royal-velvet {
+  background: radial-gradient(circle at center, #0e271f 0%, #05100c 100%);
+  color: #f7f1e5;
+}
+
+.cover-inner-card {
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  padding: 40px 24px;
+  border-radius: 28px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  animation: floatUp 0.8s ease-out;
+}
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cover-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cover-couple-names {
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.cover-date-text {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin: 0 0 28px;
+}
+
+.cover-guest-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 30px;
+}
+
+.to-label {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.guest-highlight {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 6px;
+}
+
+.apology-text {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.open-invitation-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+.open-invitation-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+.cover-modern-minimalist .open-invitation-btn {
+  background: #fafaf9;
+  color: #1c1917;
+}
+
+.cover-rustic-floral .open-invitation-btn {
+  background: #c97d60;
+  color: #ffffff;
+}
+
+.cover-royal-velvet .open-invitation-btn {
+  background: #d4af37;
+  color: #07130f;
+  font-weight: 700;
+}
